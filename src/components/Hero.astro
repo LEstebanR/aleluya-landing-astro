@@ -40,13 +40,17 @@
     </div>
   </div>
 
-  <!-- App screenshot below hero text -->
+  <!-- App video below hero text -->
   <div class="hero-app">
-    <img
-      src="https://aleluya.com/wp-content/uploads/2026/05/001-aleluya.png"
-      alt="Plataforma Aleluya — liquidación de nómina"
-      class="hero-app-img"
-    />
+    <div class="hero-video-wrap" style="position:relative;width:100%;padding-top:56.25%;border-radius:16px 16px 0 0;overflow:hidden;box-shadow:0 -8px 40px rgba(94,37,255,0.10);">
+      <iframe
+        src="https://player.vimeo.com/video/1067041022?color&autopause=0&loop=1&muted=1&title=0&portrait=0&byline=0&h=d10f93def1"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+        title="Aleluya — plataforma de nómina"
+      ></iframe>
+    </div>
   </div>
 </section>
 
@@ -61,22 +65,22 @@
   /* Purple decorative swirl */
   .hero-swirl {
     position: absolute;
-    top: -80px;
-    right: -120px;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(ellipse at center, #c4b5fd 0%, #ddd6fe 30%, transparent 70%);
+    top: -60px;
+    right: -60px;
+    width: 680px;
+    height: 680px;
+    background: radial-gradient(ellipse at center, #c4b5fd 0%, #ddd6fe 40%, transparent 70%);
     border-radius: 50%;
-    opacity: 0.45;
+    opacity: 0.55;
     pointer-events: none;
-    transform: rotate(-20deg) scale(1.3);
   }
 
   .hero-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 72px 80px 48px;
+    min-height: calc(100vh - 64px);
+    padding: 72px 80px 0;
     gap: 0;
     position: relative;
     z-index: 1;
@@ -99,7 +103,7 @@
     color: #1E1E1E;
     letter-spacing: -0.03em;
     margin-bottom: 20px;
-    max-width: 560px;
+    max-width: 540px;
   }
 
   .hero-sub {
@@ -120,7 +124,7 @@
   .cta-main {
     display: inline-flex;
     align-items: center;
-    background: #1E1E1E;
+    background: #5E25FF;
     color: #fff;
     font-size: 16px;
     font-weight: 700;
@@ -129,7 +133,7 @@
     text-decoration: none;
     transition: background .15s, transform .1s;
   }
-  .cta-main:hover { background: #333; transform: translateY(-1px); }
+  .cta-main:hover { background: #4a1be0; transform: translateY(-1px); }
 
   .cta-fine {
     font-size: 12px;
@@ -156,18 +160,21 @@
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
+    align-self: stretch;
   }
 
   .hero-img {
-    width: 100%;
-    max-width: 540px;
-    height: auto;
+    width: auto;
+    height: 100%;
+    max-height: 800px;
+    min-height: 500px;
     object-fit: contain;
+    object-position: bottom right;
     position: relative;
     z-index: 1;
   }
 
-  /* App screenshot strip */
+  /* App video strip */
   .hero-app {
     position: relative;
     z-index: 1;
@@ -176,16 +183,27 @@
     margin: 0 auto;
   }
 
-  .hero-app-img {
+  .hero-video-wrap {
+    position: relative;
     width: 100%;
-    height: auto;
-    display: block;
+    padding-top: 56.25%;
     border-radius: 16px 16px 0 0;
-    box-shadow: 0 -8px 40px rgba(94,37,255,0.08);
+    overflow: hidden;
+    box-shadow: 0 -8px 40px rgba(94,37,255,0.10);
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
   }
 
   @media (max-width: 1024px) {
-    .hero-layout { padding: 56px 40px 40px; }
+    .hero-layout { padding: 56px 40px 0; min-height: auto; }
+    .hero-img-wrap { min-height: auto; }
     .hero-app { padding: 0 40px; }
   }
 
@@ -195,8 +213,8 @@
       padding: 40px 24px 32px;
       text-align: left;
     }
-    .hero-img-wrap { order: -1; justify-content: center; margin-bottom: 32px; }
-    .hero-img { max-width: 300px; }
+    .hero-img-wrap { order: -1; min-height: 280px; height: 280px; justify-content: center; margin-bottom: 32px; }
+    .hero-img { max-height: 280px; object-position: center; }
     .hero-title { font-size: 36px; }
     .hero-app { padding: 0 24px; }
   }

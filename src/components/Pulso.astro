@@ -11,8 +11,8 @@ const items = [
   <div class="pulso-inner">
     <div class="pulso-text">
       <h2 class="pulso-title">
-        Estás dejando plata sobre la mesa.<br />
-        <strong>Y no lo sabes.</strong>
+        <span class="pulso-accent">Estás dejando plata sobre la mesa.<br />
+        Y no lo sabes.</span>
       </h2>
       <p class="pulso-desc">
         Cada quincena, Pulso revisa tu nómina y te muestra dónde se te está escapando la plata.
@@ -55,13 +55,13 @@ const items = [
 
   .pulso-title {
     font-size: clamp(32px, 3.5vw, 52px);
-    font-weight: 400;
+    font-weight: 800;
     color: #1E1E1E;
     letter-spacing: -0.03em;
     line-height: 1.15;
     margin-bottom: 20px;
   }
-  .pulso-title strong { font-weight: 800; }
+  .pulso-accent { color: #5E25FF; }
 
   .pulso-desc {
     font-size: 17px;

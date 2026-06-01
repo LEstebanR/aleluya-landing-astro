@@ -1,19 +1,34 @@
 ---
 ---
 <section class="final-cta">
-  <!-- Geometric decorations -->
-  <div class="geo geo-1"></div>
-  <div class="geo geo-2"></div>
-  <div class="geo geo-3"></div>
-  <div class="geo geo-4"></div>
-  <div class="geo geo-5"></div>
-  <div class="geo geo-6"></div>
-  <div class="geo geo-7"></div>
-  <div class="geo geo-8"></div>
-  <div class="geo geo-9"></div>
-  <div class="geo geo-10"></div>
-  <div class="geo geo-11"></div>
-  <div class="geo geo-12"></div>
+  <!-- Top left cluster: rings -->
+  <div style="position:absolute;width:120px;height:120px;border:9px solid #E65528;border-radius:50%;top:52px;left:56px;pointer-events:none;"></div>
+  <div style="position:absolute;width:88px;height:88px;border:9px solid #47F8D3;border-radius:50%;top:108px;left:148px;pointer-events:none;"></div>
+  <div style="position:absolute;width:56px;height:56px;background:#1E1E1E;border-radius:50%;top:56px;left:178px;pointer-events:none;"></div>
+
+  <!-- Top center: teal square + yellow diamond + black square -->
+  <div style="position:absolute;width:100px;height:100px;background:#47F8D3;top:48px;left:calc(50% - 168px);pointer-events:none;"></div>
+  <div style="position:absolute;width:88px;height:88px;background:#FFF28C;transform:rotate(45deg);top:54px;left:calc(50% - 52px);pointer-events:none;"></div>
+  <div style="position:absolute;width:100px;height:100px;background:#1E1E1E;top:48px;left:calc(50% + 68px);pointer-events:none;"></div>
+
+  <!-- Top right: purple arc + stacked half-pills -->
+  <div style="position:absolute;width:180px;height:90px;border:10px solid #5E25FF;border-bottom-left-radius:90px;border-bottom-right-radius:90px;border-top:none;top:0;right:72px;pointer-events:none;"></div>
+  <div style="position:absolute;width:100px;height:52px;background:#1E1E1E;border-radius:50px 50px 0 0;top:40px;right:168px;pointer-events:none;"></div>
+  <div style="position:absolute;width:100px;height:52px;background:#E65528;border-radius:0 0 50px 50px;top:92px;right:168px;pointer-events:none;"></div>
+
+  <!-- Bottom left: OOO orange tube -->
+  <div style="position:absolute;width:300px;height:120px;background:#E65528;border-radius:60px;bottom:56px;left:-20px;pointer-events:none;display:flex;align-items:center;justify-content:space-evenly;padding:0 20px;">
+    <div style="width:76px;height:76px;background:#fff;border-radius:50%;flex-shrink:0;"></div>
+    <div style="width:76px;height:76px;background:#fff;border-radius:50%;flex-shrink:0;"></div>
+    <div style="width:76px;height:76px;background:#fff;border-radius:50%;flex-shrink:0;"></div>
+  </div>
+
+  <!-- Bottom center -->
+  <div style="position:absolute;width:96px;height:96px;background:#47F8D3;border-radius:50%;bottom:68px;left:calc(50% - 112px);pointer-events:none;"></div>
+  <div style="position:absolute;width:0;height:0;border-left:56px solid transparent;border-right:56px solid transparent;border-bottom:96px solid #FFF28C;bottom:68px;left:calc(50% + 12px);pointer-events:none;"></div>
+
+  <!-- Bottom right: yellow rectangle -->
+  <div style="position:absolute;width:220px;height:220px;background:#FFF28C;bottom:-20px;right:-20px;pointer-events:none;"></div>
 
   <div class="final-cta-inner">
     <h2 class="final-cta-title">
@@ -30,11 +45,11 @@
     background: #fff;
     position: relative;
     overflow: hidden;
-    padding: 120px 24px;
+    padding: 160px 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 480px;
+    min-height: 560px;
   }
 
   .final-cta-inner {
@@ -64,118 +79,40 @@
     color: #fff;
     font-size: 18px;
     font-weight: 700;
-    padding: 18px 48px;
+    padding: 20px 52px;
     border-radius: 100px;
     text-decoration: none;
     transition: background .15s, transform .1s;
   }
   .final-cta-btn:hover { background: #4a1be0; transform: translateY(-2px); }
 
-  /* Geometric shapes */
-  .geo {
+  /* OOO tube uses class to take advantage of flex */
+  .geo-ooo-wrap {
     position: absolute;
-    pointer-events: none;
-  }
-
-  /* Top-left cluster */
-  .geo-1 {
-    width: 56px; height: 56px;
-    border: 5px solid #47F8D3;
-    border-radius: 50%;
-    top: 60px; left: 80px;
-  }
-  .geo-2 {
-    width: 40px; height: 40px;
-    background: #1E1E1E;
-    border-radius: 50%;
-    top: 70px; left: 150px;
-  }
-  .geo-3 {
-    width: 36px; height: 36px;
-    border: 5px solid #E65528;
-    border-radius: 50%;
-    top: 120px; left: 65px;
-  }
-
-  /* Top center */
-  .geo-4 {
-    width: 60px; height: 60px;
-    background: #47F8D3;
-    top: 48px; left: 50%;
-    transform: translateX(-120px);
-  }
-  .geo-5 {
-    width: 52px; height: 52px;
-    background: #FFF28C;
-    transform: rotate(45deg);
-    top: 44px; left: 50%;
-    margin-left: -8px;
-  }
-  .geo-6 {
-    width: 52px; height: 52px;
-    background: #1E1E1E;
-    top: 48px; left: 50%;
-    transform: translateX(72px);
-  }
-
-  /* Top right arc */
-  .geo-7 {
-    width: 120px; height: 120px;
-    border: 8px solid #5E25FF;
-    border-radius: 50%;
-    top: -20px; right: 60px;
-    clip-path: inset(50% 0 0 0);
-  }
-  .geo-8 {
-    width: 60px; height: 30px;
-    background: #1E1E1E;
-    border-radius: 60px 60px 0 0;
-    top: 40px; right: 120px;
-  }
-  .geo-9 {
-    width: 60px; height: 30px;
-    background: #E65528;
-    border-radius: 0 0 60px 60px;
-    top: 70px; right: 120px;
-  }
-
-  /* Bottom left */
-  .geo-10 {
-    width: 120px; height: 56px;
+    width: 300px;
+    height: 120px;
     background: #E65528;
     border-radius: 60px;
-    bottom: 60px; left: 60px;
+    bottom: 56px;
+    left: -20px;
+    pointer-events: none;
     display: flex;
-    gap: 0;
-    overflow: hidden;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
   }
-  .geo-10::before, .geo-10::after {
-    content: "";
-    flex: 1;
+  .geo-ooo-circle {
+    width: 76px;
+    height: 76px;
     background: #fff;
     border-radius: 50%;
-    margin: 8px 6px;
-  }
-
-  /* Bottom center */
-  .geo-11 {
-    width: 60px; height: 60px;
-    background: #47F8D3;
-    border-radius: 50%;
-    bottom: 64px; left: 50%;
-    transform: translateX(-80px);
-  }
-  .geo-12 {
-    width: 60px; height: 60px;
-    background: #FFF28C;
-    bottom: 48px; left: 50%;
-    transform: translateX(-8px) rotate(0deg);
-    clip-path: polygon(0 100%, 100% 100%, 50% 0);
+    flex-shrink: 0;
   }
 
   @media (max-width: 768px) {
     .final-cta { padding: 80px 24px; min-height: auto; }
     .final-cta-title { font-size: 36px; }
-    .geo { display: none; }
+    .final-cta [style] { display: none !important; }
+    .geo-ooo-wrap { display: none; }
   }
 </style>
