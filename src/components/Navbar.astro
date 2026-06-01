@@ -1,0 +1,201 @@
+---
+---
+<header class="navbar-wrapper">
+  <nav class="navbar-inner">
+    <a href="/" class="navbar-logo">
+      <img
+        src="https://aleluya.com/wp-content/uploads/2026/04/Copy-of-sin_fondo_letra_negra.png"
+        alt="aleluya"
+        width="120"
+        height="36"
+      />
+    </a>
+
+    <ul class="navbar-links">
+      <li><a href="/precios">Precios</a></li>
+      <li class="dropdown-parent">
+        <button class="dropdown-trigger">
+          Recursos
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="https://aleluya.com/blog/" target="_blank">Blog</a></li>
+          <li><a href="https://www.calculadoralaboral.co/" target="_blank">Calculadora laboral</a></li>
+          <li><a href="https://ayuda.aleluya.com/portal/es/kb" target="_blank">Centro de ayuda</a></li>
+          <li><a href="https://www.calculadoralaboral.co/retention" target="_blank">Calculadora de retención en la fuente</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="navbar-actions">
+      <a href="https://tranqui.aleluya.com/login" class="btn-login">Ingresa</a>
+      <a href="https://tranqui.aleluya.com/signup/" class="btn-signup">Empieza gratis</a>
+    </div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="/precios">Precios</a></li>
+      <li><a href="https://aleluya.com/blog/" target="_blank">Blog</a></li>
+      <li><a href="https://www.calculadoralaboral.co/" target="_blank">Calculadora laboral</a></li>
+      <li><a href="https://ayuda.aleluya.com/portal/es/kb" target="_blank">Centro de ayuda</a></li>
+    </ul>
+    <div class="mobile-actions">
+      <a href="https://tranqui.aleluya.com/login" class="btn-login">Ingresa</a>
+      <a href="https://tranqui.aleluya.com/signup/" class="btn-signup">Empieza gratis</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .navbar-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .navbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .navbar-logo img { display: block; height: 32px; width: auto; }
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    flex: 1;
+  }
+  .navbar-links a, .dropdown-trigger {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1E1E1E;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.15s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: inherit;
+  }
+  .navbar-links a:hover, .dropdown-trigger:hover { background: #f5f5f5; }
+  .dropdown-parent { position: relative; }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    padding: 8px;
+    min-width: 260px;
+    list-style: none;
+    z-index: 200;
+  }
+  .dropdown-menu a {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1E1E1E;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: background 0.15s;
+  }
+  .dropdown-menu a:hover { background: #f5f5f5; }
+  .dropdown-parent:hover .dropdown-menu,
+  .dropdown-parent:focus-within .dropdown-menu { display: block; }
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+  .btn-login {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1E1E1E;
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: 100px;
+    border: 1.5px solid #e0e0e0;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .btn-login:hover { border-color: #5E25FF; background: #fafafa; }
+  .btn-signup {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: 100px;
+    background: #5E25FF;
+    transition: background 0.15s;
+  }
+  .btn-signup:hover { background: #4a1be0; }
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: auto;
+  }
+  .mobile-menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1E1E1E;
+    border-radius: 2px;
+  }
+  .mobile-menu {
+    display: none;
+    padding: 16px 24px 24px;
+    border-top: 1px solid #f0f0f0;
+    background: #fff;
+  }
+  .mobile-menu ul { list-style: none; margin-bottom: 16px; }
+  .mobile-menu ul li a {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1E1E1E;
+    text-decoration: none;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .mobile-actions { display: flex; gap: 8px; margin-top: 8px; }
+  .mobile-actions .btn-login, .mobile-actions .btn-signup { flex: 1; text-align: center; }
+
+  @media (max-width: 768px) {
+    .navbar-links, .navbar-actions { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .mobile-menu.open { display: block; }
+  }
+</style>
+
+<script>
+  const btn = document.getElementById('mobileMenuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('open'));
+</script>

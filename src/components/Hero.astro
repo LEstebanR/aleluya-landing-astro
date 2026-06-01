@@ -1,0 +1,219 @@
+---
+---
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        +4.500 empresas colombianas ya usan Aleluya
+      </div>
+
+      <h1 class="hero-title">
+        La nómina que se opera sola.
+        <span class="hero-title-accent">Y te muestra donde se está yendo la plata.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        No montaste tu empresa para liquidar nómina. Aleluya la hace por ti.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://tranqui.aleluya.com/signup/" class="btn-primary">
+          Empieza tus 15 días gratis
+        </a>
+        <a href="https://app.storylane.io/share/xquhuzquh4zf" target="_blank" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="7.5" stroke="currentColor"/>
+            <path d="M6.5 5.5L10.5 8L6.5 10.5V5.5Z" fill="currentColor"/>
+          </svg>
+          Ver demo en 1 min
+        </a>
+      </div>
+      <p class="hero-fine-print">sin tarjeta de crédito · cancela cuando quieras</p>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>+4.500</strong>
+          <span>Empresas colombianas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong>+50 mil</strong>
+          <span>Empleados procesados cada quincena</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong>+3 billones</strong>
+          <span>COP en nómina procesados en 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <img
+        src="https://aleluya.com/wp-content/uploads/2025/10/aleluya-banner-mujer-sentada.webp"
+        alt="Empresaria relajada usando Aleluya"
+        class="hero-img"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: #fff;
+    padding: 72px 24px 60px;
+    overflow: hidden;
+  }
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5E25FF;
+    background: #f0ebff;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+    background: #5E25FF;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .hero-title {
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 800;
+    line-height: 1.12;
+    color: #1E1E1E;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .hero-title-accent {
+    display: block;
+    color: #5E25FF;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 440px;
+  }
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    background: #5E25FF;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.1s;
+    white-space: nowrap;
+  }
+  .btn-primary:hover { background: #4a1be0; transform: translateY(-1px); }
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #1E1E1E;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: 100px;
+    border: 1.5px solid #e0e0e0;
+    text-decoration: none;
+    transition: border-color 0.15s, transform 0.1s;
+    white-space: nowrap;
+  }
+  .btn-ghost:hover { border-color: #5E25FF; transform: translateY(-1px); }
+  .hero-fine-print {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 40px;
+  }
+  .hero-stats {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    background: #f8f7ff;
+    border-radius: 16px;
+    padding: 20px 24px;
+    border: 1px solid #ede8ff;
+  }
+  .stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 16px;
+  }
+  .stat:first-child { padding-left: 0; }
+  .stat:last-child { padding-right: 0; }
+  .stat strong {
+    font-size: 22px;
+    font-weight: 800;
+    color: #5E25FF;
+    white-space: nowrap;
+  }
+  .stat span {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+  }
+  .stat-divider {
+    width: 1px;
+    background: #ddd5ff;
+    margin: 4px 0;
+    flex-shrink: 0;
+  }
+  .hero-image-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+  .hero-img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 900px) {
+    .hero { padding: 48px 24px 40px; }
+    .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 32px; }
+    .hero-actions { justify-content: center; }
+    .hero-subtitle { margin: 0 auto 32px; }
+    .hero-stats { flex-direction: column; gap: 16px; }
+    .stat-divider { width: 100%; height: 1px; }
+    .stat { padding: 0; }
+    .hero-image-wrap { order: -1; }
+    .hero-img { max-width: 360px; }
+  }
+</style>

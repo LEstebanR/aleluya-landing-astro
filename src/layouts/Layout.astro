@@ -1,0 +1,31 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Aleluya | La nómina que se opera sola",
+  description = "Software de nómina para empresas colombianas. Automatiza tu nómina sin ser experto. +4.500 empresas ya lo usan.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="https://aleluya.com/wp-content/uploads/2026/04/Copy-of-sin_fondo_letra_negra.png" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  @import "../styles/global.css";
+</style>
