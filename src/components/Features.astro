@@ -1,258 +1,166 @@
 ---
 const features = [
   {
-    id: "liquidacion",
-    tag: null,
-    title: "Liquidás la nómina sin ser experto.",
-    titleAccent: "Sin errores ni enredos.",
-    desc: "Horas extras, vacaciones, ausentismos, primas y liquidaciones. Aleluya los calcula solos siguiendo la ley laboral colombiana. Tú solo revisas y apruebas.",
-    img: "https://aleluya.com/wp-content/uploads/2026/05/001-aleluya.png",
-    imgAlt: "Pantalla de liquidación de nómina en Aleluya",
-    bullets: [
-      "Cálculo automático de horas extras y recargos",
-      "Vacaciones, incapacidades y licencias",
-      "Liquidaciones y cesantías automáticas",
-      "Revisión con Rayos X antes de pagar",
-    ],
+    label: "Liquidación",
+    title: "Liquidas la nómina sin ser experto.",
+    accent: "sin errores ni enredos",
+    desc: "Horas extras, vacaciones, prestaciones, liquidaciones laborales, etc. Aleluya liquida todo automáticamente con las reglas de nómina colombiana siempre al día.",
+    img: "https://aleluya.com/wp-content/uploads/2025/06/aleluya-liquidacion-nomina-nomina-x2-1024x821.webp",
+    imgAlt: "Pantalla de liquidación de nómina Aleluya",
+    soon: false,
+    reverse: false,
   },
   {
-    id: "autogestion",
-    tag: "Próximamente",
-    title: "Tus empleados se gestionan solos",
-    titleAccent: "por WhatsApp.",
-    desc: "Solicitudes de tiempo libre, colillas de pago y certificados laborales, todo desde WhatsApp. Sin correos ni intermediarios.",
+    label: "Autogestión",
+    title: "Tus empleados se gestionan solos por",
+    accent: "WhatsApp.",
+    desc: "Piden vacaciones, descargan certificados laborales y cargan incapacidades desde su celular. Tú solo apruebas.",
     img: "https://aleluya.com/wp-content/uploads/2026/05/021-aleluya@72x.png",
-    imgAlt: "Autogestión de empleados por WhatsApp",
-    bullets: [
-      "Notificación de pago por WhatsApp y email",
-      "Colillas de pago digitales",
-      "Solicitudes de tiempo libre",
-      "Certificados laborales al instante",
-    ],
+    imgAlt: "Colillas de pago por WhatsApp",
+    soon: true,
+    reverse: true,
   },
   {
-    id: "seguridad-social",
-    tag: "Próximamente",
-    title: "Pagás la PILA",
-    titleAccent: "sin salir de Aleluya.",
-    desc: "Integración directa con los principales operadores de seguridad social en Colombia. Sin archivos, sin intermediarios.",
+    label: "Seguridad social",
+    title: "Pagas la PILA",
+    accent: "sin salir de Aleluya.",
+    desc: "Integración nativa con Aportes en Línea y Enlace Operativo, los dos operadores más grandes de Colombia.",
     img: "https://aleluya.com/wp-content/uploads/2026/05/041.png",
-    imgAlt: "Pago de seguridad social PILA desde Aleluya",
-    bullets: [
-      "Cálculo automático de aportes",
-      "Envío directo a operadores PILA",
-      "Reportes de seguridad social",
-      "Sin salir de la plataforma",
-    ],
+    imgAlt: "Pago de seguridad social desde Aleluya",
+    soon: true,
+    reverse: false,
   },
   {
-    id: "nomina-electronica",
-    tag: null,
-    title: "Emitís nómina electrónica",
-    titleAccent: "a la DIAN.",
-    desc: "Transmisiones ilimitadas a la DIAN sin costo adicional. Cumple con la normativa sin complicarte la vida.",
+    label: "Nómina electrónica",
+    title: "Emites nómina electrónica",
+    accent: "a la DIAN.",
+    desc: "Firmada y transmitida desde Aleluya. Sin abrir el portal de la DIAN. Transmisiones ilimitadas.",
     img: "https://aleluya.com/wp-content/uploads/2026/05/011-aleluya.png",
-    imgAlt: "Nómina electrónica para la DIAN",
-    bullets: [
-      "Transmisiones ilimitadas a la DIAN",
-      "Generación automática del XML",
-      "Historial completo de envíos",
-      "Sin costo adicional",
-    ],
+    imgAlt: "Nómina electrónica a la DIAN",
+    soon: false,
+    reverse: true,
   },
   {
-    id: "pagos",
-    tag: "Próximamente",
-    title: "Pagás a tus empleados",
-    titleAccent: "desde Aleluya.",
-    desc: "Integración nativa con Banco de Bogotá. Interfaces de pago para los demás bancos. Todo desde un solo lugar.",
+    label: "Pagos a empleados",
+    title: "Pagas a tus empleados",
+    accent: "desde Aleluya.",
+    desc: "Integración nativa con Banco de Bogotá. Para cualquier otro banco, generamos la interfaz lista para cargar.",
     img: "https://aleluya.com/wp-content/uploads/2026/05/bancos.png",
     imgAlt: "Pagos a empleados desde Aleluya",
-    bullets: [
-      "Integración nativa con Banco de Bogotá",
-      "Archivo plano para cualquier banco",
-      "Adelantos de nómina",
-      "Pagos de cesantías",
-    ],
+    soon: true,
+    reverse: false,
   },
 ];
 ---
 
 <section class="features-section">
-  <div class="features-inner">
-    <div class="features-header">
-      <p class="features-eyebrow">Funcionalidades</p>
-      <h2 class="features-title">Todo lo que necesitás para gestionar tu nómina</h2>
-      <p class="features-subtitle">
-        Desde la liquidación hasta el pago, Aleluya te cubre en cada paso del proceso.
-      </p>
+  {features.map((f) => (
+    <div class={`feature-row${f.reverse ? " feature-row--reverse" : ""}`}>
+      <div class="feature-text">
+        <span class="feature-label">{f.label}</span>
+        <h2 class="feature-title">
+          {f.title} <span class="feature-accent">{f.accent}</span>
+        </h2>
+        <p class="feature-desc">{f.desc}</p>
+        {f.soon && (
+          <span class="feature-soon">Disponible muy pronto</span>
+        )}
+      </div>
+      <div class="feature-media">
+        <img src={f.img} alt={f.imgAlt} loading="lazy" class="feature-img" />
+      </div>
     </div>
-
-    <div class="features-list">
-      {features.map((f, i) => (
-        <div class={`feature-row ${i % 2 === 1 ? "feature-row--reverse" : ""}`}>
-          <div class="feature-text">
-            {f.tag && <span class="feature-tag">{f.tag}</span>}
-            <h3 class="feature-title">
-              {f.title}
-              <span class="feature-title-accent"> {f.titleAccent}</span>
-            </h3>
-            <p class="feature-desc">{f.desc}</p>
-            <ul class="feature-bullets">
-              {f.bullets.map((b) => (
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <circle cx="8" cy="8" r="8" fill="#5E25FF" fill-opacity="0.12"/>
-                    <path d="M4.5 8L7 10.5L11.5 6" stroke="#5E25FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  {b}
-                </li>
-              ))}
-            </ul>
-            <a href="https://tranqui.aleluya.com/signup/" class="feature-cta">
-              Empieza gratis
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-          </div>
-          <div class="feature-img-wrap">
-            <img src={f.img} alt={f.imgAlt} loading="lazy" class="feature-img" />
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
+  ))}
 </section>
 
 <style>
   .features-section {
-    padding: 80px 24px;
     background: #fff;
-  }
-  .features-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .features-header {
-    text-align: center;
-    margin-bottom: 72px;
-  }
-  .features-eyebrow {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #5E25FF;
-    margin-bottom: 12px;
-  }
-  .features-title {
-    font-size: clamp(28px, 3.5vw, 40px);
-    font-weight: 800;
-    color: #1E1E1E;
-    letter-spacing: -0.02em;
-    margin-bottom: 16px;
-  }
-  .features-subtitle {
-    font-size: 17px;
-    color: #666;
-    max-width: 560px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-  .features-list {
     display: flex;
     flex-direction: column;
-    gap: 96px;
   }
+
   .feature-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
     align-items: center;
+    padding: 80px 80px;
+    gap: 80px;
+    border-bottom: 1px solid #f0f0f0;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
   }
   .feature-row--reverse { direction: rtl; }
   .feature-row--reverse > * { direction: ltr; }
-  .feature-tag {
-    display: inline-block;
-    font-size: 11px;
+
+  .feature-label {
+    display: block;
+    font-size: 13px;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: #E65528;
-    background: #fff3ef;
-    padding: 4px 10px;
-    border-radius: 100px;
-    margin-bottom: 16px;
+    color: #5E25FF;
+    letter-spacing: 0.01em;
+    margin-bottom: 12px;
   }
+
   .feature-title {
-    font-size: clamp(24px, 2.5vw, 32px);
+    font-size: clamp(28px, 3vw, 44px);
     font-weight: 800;
     color: #1E1E1E;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    margin-bottom: 16px;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 20px;
   }
-  .feature-title-accent { color: #5E25FF; }
+  .feature-accent { color: #5E25FF; }
+
   .feature-desc {
-    font-size: 16px;
-    color: #666;
+    font-size: 17px;
+    color: #555;
     line-height: 1.65;
     margin-bottom: 24px;
+    max-width: 440px;
   }
-  .feature-bullets {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 32px;
-  }
-  .feature-bullets li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #444;
-  }
-  .feature-bullets svg { flex-shrink: 0; }
-  .feature-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #5E25FF;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 12px 24px;
+
+  .feature-soon {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5E25FF;
+    border: 1.5px solid #c4b5fd;
     border-radius: 100px;
-    text-decoration: none;
-    transition: background 0.15s;
+    padding: 6px 16px;
+    background: #faf8ff;
   }
-  .feature-cta:hover { background: #4a1be0; }
-  .feature-img-wrap {
+
+  .feature-media {
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f9f8ff;
-    border-radius: 24px;
+    border-radius: 20px;
     padding: 32px;
-    min-height: 360px;
+    min-height: 380px;
   }
+
   .feature-img {
     width: 100%;
-    max-width: 420px;
+    max-width: 460px;
     height: auto;
     object-fit: contain;
   }
 
-  @media (max-width: 900px) {
-    .features-list { gap: 64px; }
-    .feature-row, .feature-row--reverse {
+  @media (max-width: 1024px) {
+    .feature-row { padding: 64px 40px; gap: 48px; }
+  }
+
+  @media (max-width: 768px) {
+    .feature-row,
+    .feature-row--reverse {
       grid-template-columns: 1fr;
       direction: ltr;
+      padding: 48px 24px;
       gap: 32px;
     }
-    .feature-img-wrap { min-height: 260px; }
+    .feature-media { min-height: 260px; }
   }
 </style>

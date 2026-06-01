@@ -10,37 +10,29 @@ const items = [
 <section class="pulso-section">
   <div class="pulso-inner">
     <div class="pulso-text">
-      <div class="pulso-pill">
-        <span class="pulso-dot"></span>
-        Pulso
-      </div>
       <h2 class="pulso-title">
-        Estás dejando plata sobre la mesa.
+        Estás dejando plata sobre la mesa.<br />
+        <strong>Y no lo sabes.</strong>
       </h2>
-      <p class="pulso-subtitle">
+      <p class="pulso-desc">
         Cada quincena, Pulso revisa tu nómina y te muestra dónde se te está escapando la plata.
       </p>
-      <ul class="pulso-items">
+      <ul class="pulso-list">
         {items.map((item) => (
-          <li>
+          <li class="pulso-item">
             <span class="pulso-icon">{item.icon}</span>
-            <span>{item.label}</span>
+            <span class="pulso-label">{item.label}</span>
           </li>
         ))}
       </ul>
-      <a href="https://tranqui.aleluya.com/signup/" class="btn-primary-dark">
-        Ver cómo funciona Pulso
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
     </div>
 
-    <div class="pulso-image">
+    <div class="pulso-media">
       <img
-        src="https://aleluya.com/wp-content/uploads/2025/06/aleluya-liquidacion-nomina-nomina-x2-1024x821.webp"
-        alt="Pulso - análisis de nómina"
+        src="https://aleluya.com/wp-content/uploads/2026/05/001-aleluya.png"
+        alt="Pulso — análisis de nómina en tiempo real"
         loading="lazy"
+        class="pulso-img"
       />
     </div>
   </div>
@@ -48,103 +40,71 @@ const items = [
 
 <style>
   .pulso-section {
-    padding: 80px 24px;
-    background: #1E1E1E;
-    overflow: hidden;
+    background: #fff;
+    padding: 96px 80px;
+    border-top: 1px solid #f0f0f0;
   }
   .pulso-inner {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
     align-items: center;
   }
-  .pulso-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    font-weight: 700;
-    color: #47F8D3;
-    background: rgba(71, 248, 211, 0.1);
-    border: 1px solid rgba(71, 248, 211, 0.3);
-    padding: 6px 14px;
-    border-radius: 100px;
-    margin-bottom: 24px;
-  }
-  .pulso-dot {
-    width: 7px;
-    height: 7px;
-    background: #47F8D3;
-    border-radius: 50%;
-  }
+
   .pulso-title {
-    font-size: clamp(28px, 3vw, 40px);
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    margin-bottom: 16px;
+    font-size: clamp(32px, 3.5vw, 52px);
+    font-weight: 400;
+    color: #1E1E1E;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 20px;
   }
-  .pulso-subtitle {
+  .pulso-title strong { font-weight: 800; }
+
+  .pulso-desc {
     font-size: 17px;
-    color: rgba(255, 255, 255, 0.65);
+    color: #555;
     line-height: 1.65;
-    margin-bottom: 32px;
-    max-width: 480px;
+    margin-bottom: 40px;
+    max-width: 440px;
   }
-  .pulso-items {
+
+  .pulso-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-bottom: 40px;
   }
-  .pulso-items li {
+
+  .pulso-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 15px;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 14px 18px;
-    border-radius: 12px;
-    transition: background 0.15s;
-  }
-  .pulso-items li:hover { background: rgba(255, 255, 255, 0.12); }
-  .pulso-icon { font-size: 20px; flex-shrink: 0; }
-  .btn-primary-dark {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #47F8D3;
     color: #1E1E1E;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 13px 24px;
-    border-radius: 100px;
-    text-decoration: none;
-    transition: background 0.15s, transform 0.1s;
   }
-  .btn-primary-dark:hover { background: #2de8c2; transform: translateY(-1px); }
-  .pulso-image {
+  .pulso-item:first-child { border-top: 1px solid #eee; }
+
+  .pulso-icon { font-size: 24px; flex-shrink: 0; }
+
+  .pulso-media {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
-  .pulso-image img {
+  .pulso-img {
     width: 100%;
-    max-width: 520px;
     height: auto;
     border-radius: 16px;
-    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.1);
   }
 
   @media (max-width: 900px) {
-    .pulso-inner { grid-template-columns: 1fr; gap: 40px; }
-    .pulso-image img { max-width: 100%; }
+    .pulso-section { padding: 64px 24px; }
+    .pulso-inner { grid-template-columns: 1fr; gap: 48px; }
   }
 </style>

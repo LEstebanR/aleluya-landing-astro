@@ -1,27 +1,27 @@
 ---
 ---
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        +4.500 empresas colombianas ya usan Aleluya
-      </div>
+  <!-- Purple swirl decoration -->
+  <div class="hero-swirl" aria-hidden="true"></div>
+
+  <div class="hero-layout">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Software de nómina &nbsp;·&nbsp; 4.500 empresas colombianas</p>
 
       <h1 class="hero-title">
-        La nómina que se opera sola.
-        <span class="hero-title-accent">Y te muestra donde se está yendo la plata.</span>
+        La nómina que se opera sola. Y te muestra donde se está yendo la plata.
       </h1>
 
-      <p class="hero-subtitle">
+      <p class="hero-sub">
         No montaste tu empresa para liquidar nómina. Aleluya la hace por ti.
       </p>
 
-      <div class="hero-actions">
-        <a href="https://tranqui.aleluya.com/signup/" class="btn-primary">
+      <div class="hero-ctas">
+        <a href="https://tranqui.aleluya.com/signup/" class="cta-main">
           Empieza tus 15 días gratis
         </a>
-        <a href="https://app.storylane.io/share/xquhuzquh4zf" target="_blank" class="btn-ghost">
+        <p class="cta-fine">Sin tarjeta de crédito</p>
+        <a href="https://app.storylane.io/share/xquhuzquh4zf" target="_blank" class="cta-demo">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <circle cx="8" cy="8" r="7.5" stroke="currentColor"/>
             <path d="M6.5 5.5L10.5 8L6.5 10.5V5.5Z" fill="currentColor"/>
@@ -29,27 +29,9 @@
           Ver demo en 1 min
         </a>
       </div>
-      <p class="hero-fine-print">sin tarjeta de crédito · cancela cuando quieras</p>
-
-      <div class="hero-stats">
-        <div class="stat">
-          <strong>+4.500</strong>
-          <span>Empresas colombianas</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <strong>+50 mil</strong>
-          <span>Empleados procesados cada quincena</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <strong>+3 billones</strong>
-          <span>COP en nómina procesados en 2025</span>
-        </div>
-      </div>
     </div>
 
-    <div class="hero-image-wrap">
+    <div class="hero-img-wrap">
       <img
         src="https://aleluya.com/wp-content/uploads/2025/10/aleluya-banner-mujer-sentada.webp"
         alt="Empresaria relajada usando Aleluya"
@@ -57,163 +39,165 @@
       />
     </div>
   </div>
+
+  <!-- App screenshot below hero text -->
+  <div class="hero-app">
+    <img
+      src="https://aleluya.com/wp-content/uploads/2026/05/001-aleluya.png"
+      alt="Plataforma Aleluya — liquidación de nómina"
+      class="hero-app-img"
+    />
+  </div>
 </section>
 
 <style>
   .hero {
+    position: relative;
     background: #fff;
-    padding: 72px 24px 60px;
     overflow: hidden;
+    padding-bottom: 0;
   }
-  .hero-inner {
-    max-width: 1200px;
-    margin: 0 auto;
+
+  /* Purple decorative swirl */
+  .hero-swirl {
+    position: absolute;
+    top: -80px;
+    right: -120px;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(ellipse at center, #c4b5fd 0%, #ddd6fe 30%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.45;
+    pointer-events: none;
+    transform: rotate(-20deg) scale(1.3);
+  }
+
+  .hero-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 48px;
-  }
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #5E25FF;
-    background: #f0ebff;
-    padding: 6px 14px;
-    border-radius: 100px;
-    margin-bottom: 24px;
-  }
-  .badge-dot {
-    width: 7px;
-    height: 7px;
-    background: #5E25FF;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-  .hero-title {
-    font-size: clamp(36px, 4.5vw, 56px);
-    font-weight: 800;
-    line-height: 1.12;
-    color: #1E1E1E;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
-  }
-  .hero-title-accent {
-    display: block;
-    color: #5E25FF;
-  }
-  .hero-subtitle {
-    font-size: 18px;
-    font-weight: 400;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 32px;
-    max-width: 440px;
-  }
-  .hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
-  }
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    background: #5E25FF;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 14px 28px;
-    border-radius: 100px;
-    text-decoration: none;
-    transition: background 0.15s, transform 0.1s;
-    white-space: nowrap;
-  }
-  .btn-primary:hover { background: #4a1be0; transform: translateY(-1px); }
-  .btn-ghost {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    color: #1E1E1E;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 14px 24px;
-    border-radius: 100px;
-    border: 1.5px solid #e0e0e0;
-    text-decoration: none;
-    transition: border-color 0.15s, transform 0.1s;
-    white-space: nowrap;
-  }
-  .btn-ghost:hover { border-color: #5E25FF; transform: translateY(-1px); }
-  .hero-fine-print {
-    font-size: 12px;
-    color: #999;
-    margin-bottom: 40px;
-  }
-  .hero-stats {
-    display: flex;
-    align-items: stretch;
+    padding: 72px 80px 48px;
     gap: 0;
-    background: #f8f7ff;
-    border-radius: 16px;
-    padding: 20px 24px;
-    border: 1px solid #ede8ff;
+    position: relative;
+    z-index: 1;
+    max-width: 1440px;
+    margin: 0 auto;
   }
-  .stat {
-    flex: 1;
+
+  .hero-eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 20px;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-title {
+    font-size: clamp(40px, 4.8vw, 64px);
+    font-weight: 800;
+    line-height: 1.08;
+    color: #1E1E1E;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    max-width: 560px;
+  }
+
+  .hero-sub {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.55;
+    margin-bottom: 36px;
+    max-width: 420px;
+  }
+
+  .hero-ctas {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    padding: 0 16px;
+    align-items: flex-start;
+    gap: 6px;
   }
-  .stat:first-child { padding-left: 0; }
-  .stat:last-child { padding-right: 0; }
-  .stat strong {
-    font-size: 22px;
-    font-weight: 800;
-    color: #5E25FF;
-    white-space: nowrap;
+
+  .cta-main {
+    display: inline-flex;
+    align-items: center;
+    background: #1E1E1E;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 32px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background .15s, transform .1s;
   }
-  .stat span {
+  .cta-main:hover { background: #333; transform: translateY(-1px); }
+
+  .cta-fine {
     font-size: 12px;
-    color: #666;
-    line-height: 1.4;
+    color: #aaa;
+    padding-left: 4px;
+    margin-bottom: 8px;
   }
-  .stat-divider {
-    width: 1px;
-    background: #ddd5ff;
-    margin: 4px 0;
-    flex-shrink: 0;
+
+  .cta-demo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #1E1E1E;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 4px;
+    transition: opacity .15s;
   }
-  .hero-image-wrap {
+  .cta-demo:hover { opacity: 0.7; }
+
+  .hero-img-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
     position: relative;
   }
+
   .hero-img {
     width: 100%;
-    max-width: 520px;
+    max-width: 540px;
     height: auto;
     object-fit: contain;
-    border-radius: 24px;
     position: relative;
     z-index: 1;
   }
 
-  @media (max-width: 900px) {
-    .hero { padding: 48px 24px 40px; }
-    .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 32px; }
-    .hero-actions { justify-content: center; }
-    .hero-subtitle { margin: 0 auto 32px; }
-    .hero-stats { flex-direction: column; gap: 16px; }
-    .stat-divider { width: 100%; height: 1px; }
-    .stat { padding: 0; }
-    .hero-image-wrap { order: -1; }
-    .hero-img { max-width: 360px; }
+  /* App screenshot strip */
+  .hero-app {
+    position: relative;
+    z-index: 1;
+    padding: 0 80px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .hero-app-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -8px 40px rgba(94,37,255,0.08);
+  }
+
+  @media (max-width: 1024px) {
+    .hero-layout { padding: 56px 40px 40px; }
+    .hero-app { padding: 0 40px; }
+  }
+
+  @media (max-width: 768px) {
+    .hero-layout {
+      grid-template-columns: 1fr;
+      padding: 40px 24px 32px;
+      text-align: left;
+    }
+    .hero-img-wrap { order: -1; justify-content: center; margin-bottom: 32px; }
+    .hero-img { max-width: 300px; }
+    .hero-title { font-size: 36px; }
+    .hero-app { padding: 0 24px; }
   }
 </style>
